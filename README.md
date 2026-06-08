@@ -3,7 +3,7 @@
 <!-- Logo del proyecto -->
 
 <p align="center">
-  <img src="assets/logo.png" alt="TaskRoulette Logo" width="180">
+  <img src="logo/logo_ruleta.png" alt="TaskRoulette Logo" width="180">
 </p>
 
 <p align="center">
