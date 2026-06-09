@@ -1,17 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Taskroulette - Modo Offline</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div style="text-align: center; margin-top: 20px;">
+    <h3>📝 Prueba del Entregable 2</h3>
+    <p style="color: #aaa; margin-bottom: 20px;">Los datos guardados aquí persistirán aunque reinicies sin internet.</p>
+    
+    <ion-item>
+      <ion-input label="Escribe una tarea para Taskroulette:" label-placement="stacked" [(ngModel)]="miTarea" placeholder="Ej: Estudiar para base de datos"></ion-input>
+    </ion-item>
+    
+    <ion-button expand="block" color="primary" style="margin-top: 20px;" (click)="guardarOffline()">
+      Guardar en Storage
+    </ion-button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+    <div style="margin-top: 30px; padding: 15px; background: #1e1e1e; border: 1px dashed #444; border-radius: 8px;">
+      <strong style="color: #ccc;">Dato recuperado del Storage:</strong>
+      <p style="color: #3880ff; font-size: 20px; font-weight: bold; margin-top: 10px;">{{ tareaGuardada || 'Ninguno' }}</p>
+    </div>
+  </div>
 </ion-content>

@@ -13,8 +13,9 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    Tab1Page // <-- ¡Perfecto! Al ser Standalone, se importa aquí en lugar de declararse
   ],
-  declarations: [Tab1Page]
+  declarations: [] // <-- Dejamos esto vacío para que no tire el error NG6008
 })
 export class Tab1PageModule {}
