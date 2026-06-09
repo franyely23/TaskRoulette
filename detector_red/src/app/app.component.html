@@ -1,0 +1,8 @@
+<ion-app>
+  <div *ngIf="!networkService.isOnline" 
+       style="background: red; color: white; text-align: center; padding: 20px; font-weight: bold; position: relative; z-index: 9999;">
+    🚫 DISPOSITIVO SIN CONEXIÓN
+  </div>
+  
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>
