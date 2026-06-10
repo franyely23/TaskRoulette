@@ -1,7 +1,0 @@
-{
-  "name": "Taskroulette",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
