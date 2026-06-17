@@ -1,0 +1,107 @@
+ion-content {
+  --background: linear-gradient(
+    180deg,
+    #f8f9ff 0%,
+    #eef2ff 100%
+  );
+}
+
+.container {
+  padding: 20px;
+}
+
+/* HEADER */
+.header-section {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header-section ion-icon {
+  font-size: 80px;
+  color: var(--ion-color-primary);
+}
+
+.header-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.header-section p {
+  color: #6b7280;
+  max-width: 320px;
+  margin: auto;
+  line-height: 1.5;
+}
+
+/* INPUT */
+.task-input {
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.add-button {
+  margin-bottom: 25px;
+}
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.empty-state ion-icon {
+  font-size: 90px;
+  color: #c0c0c0;
+}
+
+.empty-state p {
+  color: #7a7a7a;
+}
+
+/* TASK CARD */
+.task-card {
+  border-radius: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.task-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-info ion-icon {
+  color: #22c55e;
+  font-size: 1.3rem;
+}
+
+/* RULETA BUTTON */
+.roulette-button {
+  margin-top: 25px;
+  font-weight: bold;
+}
+
+/* BOTÓN DESHABILITADO */
+.roulette-button[disabled] {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+/* HINT TEXT */
+.hint-text {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.85rem;
+}

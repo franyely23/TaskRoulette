@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,8 +7,43 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss'],
   standalone: false,
 })
-export class Tab2Page {
+export class Tab2Page implements OnInit {
 
-  constructor() {}
+  nuevaTarea: string = '';
+  tareas: string[] = [];
 
+  constructor(private storageService: StorageService) {}
+
+  async ngOnInit() {
+    await this.cargarTareas();
+  }
+
+  async cargarTareas() {
+    const data = await this.storageService.get('tareas');
+    if (data) {
+      this.tareas = data;
+    }
+  }
+
+  async guardarTareas() {
+    await this.storageService.set('tareas', this.tareas);
+  }
+
+  async agregarTarea() {
+
+    if (!this.nuevaTarea.trim()) return;
+
+    this.tareas.push(this.nuevaTarea);
+
+    this.nuevaTarea = '';
+
+    await this.guardarTareas();
+  }
+
+  async eliminarTarea(index: number) {
+
+    this.tareas.splice(index, 1);
+
+    await this.guardarTareas();
+  }
 }
